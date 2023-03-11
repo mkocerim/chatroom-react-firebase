@@ -18,7 +18,7 @@ function App() {
   return (
     <div className="container">
       {room ? (
-        <Chat />
+        <Chat room={room} />
       ) : (
         <div className="room-container">
           <h1>Chat Odasi</h1>

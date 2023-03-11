@@ -95,10 +95,72 @@ body {
 
 .chat {
   background-color: white;
-  width: 80vh;
-  height: 80vh;
+  width: 70vh;
+  height: 70vh;
   display: flex;
   flex-direction: column;
+  border-radius: 10px;
+}
+.chat header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #ff2e63;
+  border-radius: 10px 10px 0 0;
+}
+.chat header p {
+  color: white;
+}
+.chat header a {
+  padding: 5px 10px;
+  text-decoration: none;
+  background-color: #00dde9;
+  font-family: "Inter";
+  color: white;
+  text-shadow: 2px 2px 20px black;
+  cursor: pointer;
+  font-weight: 400;
+  border-radius: 3px;
+}
+.chat header a:hover {
+  background-color: #00adb5;
+}
+.chat .messages {
+  height: 100%;
+  width: 100%;
+  padding: 20px;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.chat .messages .user-message {
+  display: flex;
+  gap: 20px;
+}
+.chat .messages .user-message .user {
+  font-weight: bold;
+}
+.chat form {
+  display: flex;
   justify-content: center;
+  gap: 20px;
   align-items: center;
+}
+.chat form input {
+  margin: 20px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  outline: none;
+  width: 60%;
+}
+.chat form input:focus {
+  border: 1px solid #00858d;
+}
+.chat form button {
+  padding: 10px 20px;
+  background-color: #00dde9;
+  color: white;
+  border: none;
+  curser: pointer;
 }/*# sourceMappingURL=style.css.map */
