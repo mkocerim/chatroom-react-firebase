@@ -12,8 +12,9 @@ import { auth, db } from "../firebase/FirebaseConfig";
 
 const Chat = ({ room }) => {
   const [message, setMessage] = useState("");
-  const messagesRef = collection(db, "messages");
   const [messages, setMessages] = useState([]);
+  const messagesRef = collection(db, "messages");
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log(message);
@@ -44,6 +45,7 @@ const Chat = ({ room }) => {
       setMessages(commingMessages);
     });
   }, []);
+
   return (
     <div className="chat">
       <header>
@@ -62,7 +64,7 @@ const Chat = ({ room }) => {
       </form>
       <div className="messages">
         {messages.map((message) => (
-          <>
+          <div key={message.id}>
             {auth.currentUser.displayName === message.user ? (
               <div key={message.id} className="user-message">
                 <span className="text">{message.text}</span>
@@ -73,7 +75,7 @@ const Chat = ({ room }) => {
                 <span className="text">{message.text}</span>
               </div>
             )}
-          </>
+          </div>
         ))}
       </div>
     </div>

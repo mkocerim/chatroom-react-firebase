@@ -137,8 +137,19 @@ body {
 .chat .messages .user-message {
   display: flex;
   gap: 20px;
+  flex-direction: row-reverse;
 }
-.chat .messages .user-message .user {
+.chat .messages .user-message .text {
+  background-color: #00858d;
+  color: white;
+  padding: 4px;
+  border-radius: 7px 7px 0 7px;
+}
+.chat .messages .message {
+  display: flex;
+  gap: 20px;
+}
+.chat .messages .message .user {
   font-weight: bold;
 }
 .chat form {
@@ -159,8 +170,12 @@ body {
 }
 .chat form button {
   padding: 10px 20px;
-  background-color: #00dde9;
+  background-color: #00adb5;
   color: white;
   border: none;
   curser: pointer;
+  border-radius: 6px;
+}
+.chat form button:hover {
+  background-color: #00858d;
 }/*# sourceMappingURL=style.css.map */

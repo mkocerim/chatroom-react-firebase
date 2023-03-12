@@ -138,13 +138,11 @@ body {
       display: flex;
       gap: 20px;
       flex-direction: row-reverse;
-      .text{
+      .text {
         background-color: #00858d;
-        color: white;padding: 4px;
+        color: white;
+        padding: 4px;
         border-radius: 7px 7px 0 7px;
-      }
-      .user {
-        font-weight: bold;
       }
     }
     .message {
@@ -173,10 +171,14 @@ body {
     }
     button {
       padding: 10px 20px;
-      background-color: #00dde9;
+      background-color: #00adb5;
       color: white;
       border: none;
       curser: pointer;
+      border-radius: 6px;
+      &:hover {
+        background-color: #00858d;
+      }
     }
   }
-
+}
